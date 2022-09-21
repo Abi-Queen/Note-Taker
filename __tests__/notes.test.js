@@ -22,7 +22,8 @@ test('finds by id', () => {
       id: '1',
       title: 'Catch up on coding assignments',
       text: 'Module 11',
-  ];
+    }
+  ]
 
   const result = findById('1', startingNotes);
 
