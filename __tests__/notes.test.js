@@ -11,25 +11,6 @@ test('creates a note object', () => {
   expect(note.id).toBe('12');
 });
 
-test('finds by id', () => {
-  const startingNotes = [
-    {
-      id: '0',
-      title: 'Resume',
-      text: 'Update employment section',
-    },
-    {
-      id: '1',
-      title: 'Catch up on coding assignments',
-      text: 'Module 11',
-    }
-  ]
-
-  const result = findById('1', startingNotes);
-
-  expect(result.title).toBe('Catch up on coding assignments');
-});
-
 test('validates text', () => {
   const note = {
     id: '0',
