@@ -1,7 +1,4 @@
-//create routes front end can request data from
-const { notes } = require('./data/notes');
-
-//add npms
+//add npm
 const express = require('express');
 
 //instantiate server

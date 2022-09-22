@@ -2,14 +2,9 @@ const router = require('express').Router();
 const { createNewNote, validateNote } = require('../../lib/notes');
 const { notes } = require('../../data/notes.json');
 
-router.get('/notes', (req, res) => {
-  let results = notes;
-  if (req.query) {
-    results = filterByQuery(req.query, results);
-  }
-  res.json(results);
-});
+//do I need a createNewNote route?
 
+//need a get route only for deleting? 
 router.get('/notes/:id', (req, res) => {
   const result = findById(req.params.id, notes);
   if (result) {
@@ -26,7 +21,7 @@ router.post('/notes', (req, res) => {
   if (!validateNote(req.body)) {
     res.status(400).send('The note is not properly formatted.');
   } else {
-    const note = createNewAnimal(req.body, notes);
+    const note = createNewNote(req.body, notes);
     res.json(note);
   }
 });
